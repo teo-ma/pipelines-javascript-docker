@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: teomapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teomapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: teomapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: teomapipelinesjavascriptdocker 
+          image: acrmonitoringtest.azurecr.io/teomapipelinesjavascriptdocker
+          ports:
+          - containerPort: 80
